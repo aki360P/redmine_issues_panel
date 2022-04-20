@@ -155,10 +155,13 @@ module Redmine
             ).html_safe +
             @query.inline_columns.collect do |column|
               render_column_content(column, issue)
-            end.join.html_safe +
-            view.content_tag('div',
-              view.watcher_link(issue.becomes(Issue), User.current),
-              :class => 'footer clear').html_safe, 
+            ###
+            ### delete watcher button
+            #end.join.html_safe +
+            end.join.html_safe,
+            #view.content_tag('div',
+            #  view.watcher_link(issue.becomes(Issue), User.current),
+            #  :class => 'footer clear').html_safe, 
             :class => "card-content"),
           :id => "issue-#{issue.id}",
           :class => "hascontextmenu #{issue.priority.try(:css_classes)} #{issue.overdue? ? 'overdue' : ''} #{issue.closed? ? 'closed' : ''}"

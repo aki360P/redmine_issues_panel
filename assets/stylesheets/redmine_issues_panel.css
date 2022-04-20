@@ -117,7 +117,8 @@ table.issues-panel td {
 }
 .card-content .caption {
   float: left;
-  padding-right: 2px;
+  padding-left: 4px;  /* add */
+  padding-right: 8px;  /* change */
 }
 .card-content .header .js-contextmenu {
   float: right;
@@ -184,4 +185,10 @@ body.controller-issues_panel .ui-widget-overlay+.ui-widget-overlay {
     width: 100%;
     max-width: 100%;
   }
+}
+
+
+/* progress_bar position fix */
+div.done_ratio div.value table.progress {
+  margin: 2px 6px 0px 0;
 }
